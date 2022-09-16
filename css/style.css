@@ -460,6 +460,47 @@ body {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
 }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__input {
+  appearance: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  transition: all 200ms ease-out;
+  border-bottom: 3px transparent solid;
+  width: 90%;
+  display: block;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 3px #55c57a solid;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+.form__input::placeholder {
+  color: #999999;
+}
+.form__input:focus:invalid {
+  border-color: #ff7730;
+}
+.form__label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.7rem 0 0 2rem;
+  display: block;
+  transition: all 200ms;
+}
+.form__input:placeholder-shown + .form__label {
+  transform: translate(0, -4rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -544,6 +585,23 @@ body {
 .section-stories {
   position: relative;
   padding: 15rem 0;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 51.5%, transparent 51.5%), url(../img/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 50rem;
+}
+.book__form {
+  width: 50%;
+  padding: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
