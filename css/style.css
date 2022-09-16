@@ -206,7 +206,10 @@ body {
   object-fit: cover;
 }
 
-.btn:link, .btn:visited {
+.btn {
+  appearance: none;
+}
+.btn, .btn:link, .btn:visited {
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
@@ -224,7 +227,8 @@ body {
   opacity: 0;
   transform: scale(1.5, 1.8);
 }
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translate(0, -1px);
   box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.2);
 }
@@ -279,6 +283,9 @@ body {
 }
 .btn--nowrap {
   white-space: nowrap;
+}
+.btn--no-border {
+  border: none;
 }
 
 .card {
@@ -499,6 +506,47 @@ body {
   transform: translate(0, -4rem);
   opacity: 0;
   visibility: hidden;
+}
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+}
+.form__radio-group > input {
+  display: none;
+  visibility: hidden;
+}
+.form__radio-label {
+  cursor: pointer;
+  font-size: 1.6rem;
+  position: relative;
+  padding-left: 5rem;
+}
+.form__radio-button {
+  position: absolute;
+  left: 0;
+  top: -0.65rem;
+  width: 3rem;
+  height: 3rem;
+  border: 5px solid #55c57a;
+  border-radius: 8rem;
+  display: inline-block;
+}
+.form__radio-button::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+}
+.form__radio-input:not(:checked) ~ .form__radio-label .form__radio-button::after {
+  opacity: 0;
 }
 
 .story {

@@ -1,5 +1,7 @@
 .btn {
-    &:link, &:visited {
+    appearance: none;
+
+    &, &:link, &:visited {
         position: relative;
         text-transform: uppercase;
         text-decoration: none;
@@ -20,7 +22,8 @@
         }
     }
 
-    &:active {
+    &:active, &:focus {
+        outline: none;
         transform: translate(0, -1px);
         box-shadow: 0 5px 1rem rgba($color-black, .2);
     }
@@ -87,5 +90,9 @@
 
     &--nowrap {
         white-space: nowrap;
+    }
+
+    &--no-border {
+        border: none;
     }
 }
