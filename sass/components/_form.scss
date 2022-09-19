@@ -80,13 +80,10 @@
             height: 1.5rem;
             width: 1.5rem;
             border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
             opacity: 1;
-            transition: opacity 200ms ease-out
+            transition: opacity 200ms ease-out;
+            @include absCenter;
         }
 
     }
