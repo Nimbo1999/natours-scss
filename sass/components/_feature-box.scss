@@ -9,6 +9,11 @@
 
     transition: transform 200ms ease-out, box-shadow 200ms ease-out;
 
+    @include respond(tab-port) {
+        padding: 2rem;
+        font-size: 1.6rem;
+    }
+
     &__icon {
         display: inline-block;
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
@@ -17,6 +22,10 @@
         color: transparent;
         font-size: 6rem;
         margin-bottom: .5rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
     }
 
     &:hover {
