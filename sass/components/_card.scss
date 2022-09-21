@@ -140,7 +140,7 @@
         font-weight: 100;
     }
 
-    @include respond(tab-port) {
+    @media only screen and (max-width: 56.25em) and (hover: none) {
         height: auto;
         border-radius: 1rem;
         background-color: $color-white;
